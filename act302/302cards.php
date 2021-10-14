@@ -1,10 +1,16 @@
 <?php
-require_once "Card.php";
+require "Card.php";
+require "CardCollection.php";
 $c1 = new Card("diamonds", "A", 13);
 $c2 = new Card("spades", "A", 13);
 $c3 = new Card("hearts", "A", 13);
 $c4 = new Card("clubs", "A", 13);
+$c5 = new Card("spades", "Q", 12);
+$cards = [$c1, $c2, $c3, $c4, $c5];
+shuffle($cards);
 
-$cards = [$c1, $c2, $c3, $c4];
+$cardsColl = new CardCollection();
+$cardsColl -> add($cards);
+$cardsColl -> addCard($c5);
 
-require_once "302cards-view.php";
+require "302cards-view.php";

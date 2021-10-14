@@ -7,12 +7,14 @@
 <body>
 
 <?php
-require "302cards.php";
-
-foreach ($cards as $carta){
-    echo "<p>".$carta -> getSuit()." - ".$carta -> getSymbol()." - ".$carta -> getValue()."</p>";
+$cardsColl ->shuffle();
+foreach ($cardsColl -> getCards() as $carta){
+    if(is_array($carta)){
+        foreach ($carta as $valor){
+            echo "<h1>".$valor -> getSymbol()."-".$valor -> getSuit()." -> ".$valor -> getValue()."</h1>";
+        }
+    }
 }
-
 ?>
 
 </body>
