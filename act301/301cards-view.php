@@ -10,7 +10,7 @@
 require "301cards.php";
 
 foreach ($cards as $carta){
-    echo "<p>".$carta -> getSuit()." - ".$carta -> getSymbol()." - ".$carta -> getValue()."</p>";
+    echo "<p>".$carta -> getSuit()." -> ".$carta -> getSymbol()." - ".$carta -> getValue()."</p>";
 }
 
 ?>
