@@ -5,7 +5,7 @@ require "CardCollection.php";
 
 $cardCollection=new CardCollection();
 
-$suits = ["Cors", "Diamants", "Trèbols", "Piques"];
+$suits = ["hearts", "diamonds", "spades", "clubs"];
 
 $symbols = ["A", "2", "3", "4", "5", "6", "7", 
     "8", "9", "10", "J", "Q", "K"];

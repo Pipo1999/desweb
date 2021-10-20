@@ -26,8 +26,15 @@ class CardCollection
     }
 
     function writer() {
-
+        foreach ($this->cards as $card) {
+            echo "<p>" . $card->getSuit() . $card->getSymbol() . "</p>";
+        }
     }
 
+    function imagenes() {
+        foreach ($this->cards as $card) {
+            echo "<img alt=\"imagenes\" src=\"cards/" . $card->getSymbol() . "_of_" . $card->getSuit() . ".svg\" />";
+        }
+    }
 }
 
